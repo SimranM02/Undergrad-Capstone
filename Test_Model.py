@@ -64,7 +64,6 @@ with torch.no_grad():
             break  # Exit loop after 50 tests
         num_tests += 1
 
-        prediction = 1 if random.random() < 0.98 else 0
         outputs = torch.tensor([[0, prediction]], device=device)  # Prediction with confidence 1
 
         test_predictions.append(prediction)
